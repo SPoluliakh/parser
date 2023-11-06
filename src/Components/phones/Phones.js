@@ -4,7 +4,6 @@ import { useGetFile } from "../../hooks/useGetFile";
 import {
   filteredPhonesSelector,
   phonesFilterSelector,
-  phonesSelector,
 } from "../../redux/selectors/phones";
 import { getPhones, setFilter } from "../../redux/slices/phones";
 import Form from "./form/Form";
@@ -55,6 +54,7 @@ const Phones = () => {
   const { getCSV } = useGetFile(phones);
 
   const prepareData = (text) => {
+    // eslint-disable-next-line no-useless-escape
     const regexp = /(?:\+|\d)[\d\-\(\) ]{9,}\d/g;
     const matches_array = [...text.match(regexp)].map((item) =>
       item.length > 11 ? item.slice(0, 11) : item

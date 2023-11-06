@@ -1,13 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setPosition } from "../../../../redux/slices/phones";
+// import { useDispatch } from "react-redux";
+// import { setPosition } from "../../../../redux/slices/phones";
 import { ListItemStyled } from "./ListItemStyled";
 
 const ListItem = ({ phone, idx }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const onSetPosition = ({ target }) =>
-    dispatch(setPosition({ _id: phone._id, value: target.value }));
+  // const onSetPosition = ({ target }) =>
+  //   dispatch(setPosition({ _id: phone._id, value: target.value }));
   return (
     <ListItemStyled>
       <p className="listItemName">
